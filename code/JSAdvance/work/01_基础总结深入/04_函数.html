@@ -32,6 +32,32 @@
     3. 如果大于60, 输出: 算了吧!
     4. 其它, 输出: 刚好!
   */
+  function fn(age) {
+      if(age<18){
+          console.log('未成年，在等等');
+      }else if(age>60){
+          console.log('算了吧');
+      }else{
+          console.log('刚好');
+      }
+  }
+  fn(17)
+  fn(61)
+  fn(33)
+  var fn1 = function () {
+      console.log('fn1');
+  }
+  console.log(fn1 instanceof Object);//true
+  console.log(fn1.prototype);//Object {constructor: function}
+  console.log(fn1.toString());//function(){console.log('fn1')}
+ console.log(fn1.call);//内部有方法
+  fn1.xx='abc'//可以添加属性
+  console.log(fn1.xx);
+//  可以添加方法
+  fn1.t2 = function () {
+      console.log('t2()');
+  }
+  fn1.t2()//t2()
 </script>
 </body>
 </html>

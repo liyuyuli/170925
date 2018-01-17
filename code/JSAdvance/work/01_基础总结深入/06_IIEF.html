@@ -14,6 +14,18 @@
   * 不污染外部命名空间
 -->
 <script type="text/javascript">
+   /* (function () {
+        var a = 3
+        a++
+        console.log(a);
+    })()//3*/
+    (function (i) {
+        var b = 4
+        function fn() {
+            console.log('fn',i+b);
+        }
+        fn()
+    })(3)//fn 7
 
 </script>
 

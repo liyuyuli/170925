@@ -20,6 +20,41 @@
   * 本质上任何函数在执行时都是通过某个对象调用的
 -->
 <script type="text/javascript">
+  function Person(color) {
+      console.log(this)//window
+      this.color = color;
+      this.getColor = function () {
+          console.log(this);
+          return this.color;
+      };
+      this.setColor = function () {
+          console.log(this)
+          this.color = color;
+      };
+
+  }
+  Person('red')
+  var p =new Person('yellow')
+  p.getColor()
+
+  var obj = {}
+  p.setColor.call(obj,'black')
+  var test = p.setColor
+  test()
+  function fun1() {
+      function fun2() {
+          console.log(this);
+      }
+      fun2()
+  }
+  fun1()
+  function fn() {
+      console.log(this);
+  }
+  var obj = {n:1}
+var fn2 = fn.bind(obj)
+  fn()
+  fn2()
 </script>
 </body>
 </html>
