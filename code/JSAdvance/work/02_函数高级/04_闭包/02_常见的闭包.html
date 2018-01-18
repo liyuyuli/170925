@@ -11,6 +11,28 @@
 2. 将函数作为实参传递给另一个函数调用
 -->
 <script type="text/javascript">
+//    将函数作为另一个函数的返回值
+  function fn1() {
+      var n = 2
+      function fn2() {
+          n++
+          console.log(n);
+      }
+      return fn2
+
+  }
+
+  var t =fn1()//返回的是一个函数
+  t()
+  t()
+  t=null//若想结束调用则让t=null
+//2. 将函数作为实参传递给另一个函数调用
+  function showDelay(msg,time) {
+      setTimeout(function () {
+          alert(msg)
+      },time)
+  }
+  showDelay('你是谁',2000)
 </script>
 </body>
 </html>

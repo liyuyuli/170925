@@ -18,7 +18,14 @@
   * 内部函数引用了外部函数的数据(变量/函数)
 -->
 <script type="text/javascript">
-
+function fn1() {
+    var n =2
+    function fn2() {
+        console.log(n);
+    }
+    fn2()
+}
+fn1()
 </script>
 </body>
 </html>

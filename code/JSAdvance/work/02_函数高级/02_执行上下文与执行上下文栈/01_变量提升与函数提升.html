@@ -15,7 +15,14 @@
 3. 问题: 变量提升和函数提升是如何产生的?
 -->
 <script type="text/javascript">
+//变量声明，在定义之前就可以调用，值为undefined
+console.log( a);//undefined
 
+fn()  //函数声明，在之前就可以直接调用
+function fn() {
+    console.log('fn()');
+}
+//fn()
 </script>
 </body>
 </html>

@@ -28,6 +28,32 @@
 -->
 <script type="text/javascript">
 
+console.log(a1);//undefined 全局数据预处理  用var声明的变量值为undefined
+console.log(a2);//undefined
+console.log(a3);//function声明的函数==赋值fun  function a3() {console.log('a3()');}
+//console.log(a4);a4 is not defined
+  var a1 = 3
+  var a2 =function () {
+      console.log('a2()');
+  }
+  function a3() {
+      console.log('a3()');
+  }
+  a4 =4
+  function fn(x,y) {
+      console.log(x,y);//执行实参 实参没有 undefined undefined
+      console.log(b1);//undefined
+      console.log(b2);//function b2(){}
+      console.log(arguments);
+      console.log(this);//window
+      //console.log(b3);//b3 is not defined
+      var b1 = 5
+      function b2() {
+
+      }
+      b3=6
+  }
+  fn()
 </script>
 </body>
 </html>
