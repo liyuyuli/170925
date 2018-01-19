@@ -12,6 +12,39 @@
   * 问题: 对象没有一个具体的类型, 都是Object类型
 -->
 <script type="text/javascript">
+  //每次调用都返回一个新的对象
+//  创建一个人对象的工厂函数
+  function createPerson(name,age) {
+      var p ={
+          name,
+          age,
+          setName(name){
+              this.name=name
+          }
+
+      }
+      return p
+  }
+  var p1 = createPerson('jack',22)
+  console.log(p1.name,p1.age);
+  var p2 =createPerson('rose',23)
+  console.log(p2.age,p2.name);
+//  创建一个狗对象的工厂函数
+  function createDog(name,color) {
+             var d ={
+                 name,
+                 color,
+                 setName(name){
+                     this.name=name
+                 }
+             }   
+             return d
+          
+  }
+  var d1 = createDog('大黄','yellow')
+  var d2  = createDog('旺财','black')
+  console.log(d1.name,d1.color);
+  console.log(d2.name,d2.color);
 </script>
 </body>
 </html>
